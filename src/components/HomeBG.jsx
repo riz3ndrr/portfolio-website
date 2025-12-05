@@ -1,25 +1,37 @@
 import fishBodyImg from "../assets/fish-body.png" 
 import fishTailImg from "../assets/fish-tail.png" 
+import sharkBodyImg from "../assets/shark-body.png" 
+import sharkTailImg from "../assets/shark-tail.png" 
 
 export const HomeBG = () => {
   return ( 
     <div className="absolute z-60 h-screen w-screen text-4xl overflow-hidden">
-    <Fish/>
+    <School upperY = {30} lowerY = {5} isSlow = {true} isSmall= {true} body = {fishBodyImg} tail = {fishTailImg} amount = {20} widthBoundaries = {[13, 9]} heightFactor = {2 / 3}/>
+    <School upperY = {50} lowerY = {50} isSlow = {true} isSmall= {false} body = {sharkBodyImg} tail = {sharkTailImg} amount = {1} widthBoundaries = {[30, 20]} heightFactor = {5 / 11}/>
     </div>
 
   )
 }
 
 
-const Fish = () => {
+function School({upperY, lowerY, isSlow, isSmall, body, tail, amount, widthBoundaries, heightFactor}) {
+  const upperWidth = widthBoundaries[0];
+  const lowerWidth = widthBoundaries[1];
+  
+  const speedBoundaries = isSlow ? [10, 11] : [6, 7];
+  const upperSpeed = speedBoundaries[1];
+  const lowerSpeed = speedBoundaries[0];
 
-  const fish = Array.from({length : 15}).map((_, index) => {
-      const top = Math.random() * 100;
-      const left = Math.random() * 100;
-      const width = Math.round(Math.random() * (12 - 5)) + 5;
-      const height = Math.round(width / 3 * 2);
-      const isSlow = Math.round(Math.random());
-      console.log(isSlow)
+  const fish = Array.from({length : amount}).map((_, index) => {
+      const top = Math.random() * (upperY - lowerY) + lowerY;
+      
+      console.log(4);
+      const left = Math.random() * (50 - 30) + 30;
+      const width = Math.round(Math.random() * (upperWidth - lowerWidth)) + lowerWidth;
+      const height = width * heightFactor; 
+      const speed = Math.random() * (upperSpeed - lowerSpeed) + lowerSpeed;
+
+      /**const isSlow = Math.round(Math.random());**/
 
       return (
       <div key = {index}
@@ -29,25 +41,25 @@ const Fish = () => {
             left: `${left}%`,
           }}>
     
-        <img src={fishBodyImg} alt="fish body" 
-             className="absolute w-50 h-45 animate-fish-movement"
+        <img src={body} alt="fish body" 
+             className="absolute animate-fish-movement"
              style ={{
               width: `${width}rem`,
               height: `${height}rem`,
-              "--duration": isSlow ? "12s" : "6s" 
+              "--duration": `${speed}s` 
           }}
         ></img>
-        <img src={fishTailImg} alt="fish Tail"
-             className="absolute w-50 h-45 animate-fish-tail-movement"
+        <img src={tail} alt="fish Tail"
+             className="absolute animate-fish-tail-movement"
             style ={{
               width: `${width}rem`,
               height: `${height}rem`,
-              "--duration": isSlow ? "12s" : "6s" 
+              "--duration": `${speed}s` 
           }}
         ></img>
       </div>
       )
     }); 
 
-  return <div className ="relative w-full h-full">{fish}</div>;
+  return <div className ="absolute w-full h-full">{fish}</div>;
 }

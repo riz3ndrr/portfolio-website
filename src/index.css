@@ -13,24 +13,24 @@ html, body {
   @keyframes fish-tail-movement {
   
     0% {
-      transform: translateX(110vw) skewY(5deg) translateY(3vh);
+      transform: translateX(110vw) ;
     }
 
     25% {
-      transform: translateX(55vw) skewY(-5deg) translateY(1.5vh);
+      transform: translateX(55vw) ;
     }
 
     50% {
-      transform: translateX(0) skewY(5deg) translateY(0);
+      transform: translateX(0) ;
     }
 
     75% {
-      transform: translateX(-55vw) skewY(-5deg) translateY(-1.5vh);
+      transform: translateX(-55vw) ;
     }
 
 
     100% {
-      transform: translateX(-110vw) skewY(5deg) translateY(-3vh);
+      transform: translateX(-110vw) ;
     }
 
   }
@@ -42,16 +42,16 @@ html, body {
   @keyframes fish-movement {
   
     0% {
-      transform: translateX(110vw) rotate(3deg) translateY(3vh);
+      transform: translateX(110vw) ;
     }
 
     50% {
-      transform: translateX(0) rotate(-3deg) translateY(0);
+      transform: translateX(0) ;
     }
 
 
     100% {
-      transform: translateX(-110vw) rotate(3deg) translateY(-3vh);
+      transform: translateX(-110vw) ;
     }
 
   }
