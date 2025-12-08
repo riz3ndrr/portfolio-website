@@ -1,3 +1,5 @@
+import {RevealOnScroll} from "../RevealOnScroll"
+
 export const About = () => {
   const programmingLanguages = ["Python", "C", "Java", "JavaScript", "Bash", "SQL"];
   const tools = ["React", "Git", "Linux", "JavaFX", "JUnit", "NVim", "TailwindCSS", "Pandas", "APIs", "Vite"];
@@ -6,10 +8,11 @@ export const About = () => {
   const languages = ["English", "Tagalog", "Spanish"]
 
   return (
-    <section id = "about" className = "relative min-h-screen h-auto flex items-center justify-center">
+    <RevealOnScroll>
+    <section id = "about" className = "relative min-h-screen h-auto py-20 flex items-center justify-center">
 
 
-      <div className = "max-w-5xl mx-auto px-4 top-0">
+      <div className = "max-w-5xl mx-auto px-4">
         <h2 className = "text-5xl font-bold text-center font-mono mb-8 text-white">About Me</h2>
 
         <div className = "rounded-xl bg-[#021738] p-8 border-white/10 border hover:-translate-y-1 transition-all my-5">
@@ -100,5 +103,6 @@ export const About = () => {
       </div >
   
     </section>
+    </RevealOnScroll>
   )
 }

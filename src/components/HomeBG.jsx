@@ -3,16 +3,19 @@ import fishTailImg from "../../public/assets/fish-tail.png"
 import sharkBodyImg from "../../public/assets/shark-body.png" 
 import sharkTailImg from "../../public/assets/shark-tail.png" 
 import {useMemo} from "react";
+import {RevealOnScroll} from "./RevealOnScroll"
 
 export const HomeBG = () => {
   return ( 
-    <div className = "z-40">
+    <RevealOnScroll>
+    <div id="#home" className = "z-40">
       <SubTitle/>
       <div className="relative h-screen w-screen text-4xl overflow-hidden">
         <School upperY = {30} lowerY = {5} isSlow = {true} isSmall= {true} body = {fishBodyImg} tail = {fishTailImg} amount = {30} widthBoundaries = {[9, 7]} heightFactor = {2 / 3}/>
         <School upperY = {45} lowerY = {45} isSlow = {true} isSmall= {false} body = {sharkBodyImg} tail = {sharkTailImg} amount = {1} widthBoundaries = {[50, 40]} heightFactor = {5 / 11}/>
       </div>
   </div>
+    </RevealOnScroll>
   )
 }
 

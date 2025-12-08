@@ -1,11 +1,13 @@
 import GitHubLogo from "../../../public/assets/github-mark.png"
 import projectJson from "./json/projects.json"
+import {RevealOnScroll} from "../RevealOnScroll"
 
 
 
 
 const Project = ({image, title, subtitle, desc, github, tech_stack}) => {
     return (
+    <RevealOnScroll>
       <div className = "rounded-xl border-white/10 border-1 hover:-translate-y-1 transition grid max py-5 my-3 px-2 grid-cols-1 md:grid-cols-2 gap-6 "> 
         <img src={image} alt="Screenshot of Deadly Fight" className = "rounded-xl hover:scale-105 transition ease-in w-full max-w-lg mx-auto mx-5"/>
           <div className = "relative ">
@@ -28,6 +30,7 @@ const Project = ({image, title, subtitle, desc, github, tech_stack}) => {
             </div>
           </div>
       </div> 
+    </RevealOnScroll>
     )
 }
 
@@ -40,8 +43,8 @@ export const Projects = () => {
 
 
   return (
-
-  <section id="projects" className = "min-h-screen relative flex justify-center items-center">
+  <RevealOnScroll>
+  <section id="projects" className = "pt-30 min-h-screen h-auto relative flex justify-center items-center">
     
 
     <div className = "max-w-6xl">
@@ -52,6 +55,7 @@ export const Projects = () => {
     </div>
 
   </section>
+    </RevealOnScroll>
   )
 
 
