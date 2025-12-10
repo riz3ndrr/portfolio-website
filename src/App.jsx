@@ -2,10 +2,10 @@ import './App.css'
 import {LoadingScreen} from "./components/LoadingScreen" 
 import {Navbar} from "./components/Navbar"
 import {MobileMenu} from "./components/MobileMenu"
-import {HomeBG, Title} from "./components/HomeBG"
+import {Home, Title} from "./components/sections/Home"
 import {About} from "./components/sections/About" 
 import {Projects} from "./components/sections/Projects"
-import {Contact} from "./components/sections/Contact.jsx"
+import {Contact} from "./components/sections/Contact"
 import "./index.css"
 import {useState, useEffect} from "react";
 
@@ -23,7 +23,7 @@ function App() {
       <div className = {`min-h-screen 
         transition-opacity duration-800 ${isLoaded ? "opacity-100": "opacity-0"} text-gray-100`}>
 
-        <HomeBG/>
+        <Home/>
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
         <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
         <About/>
