@@ -17,7 +17,7 @@ const Project = ({image, title, subtitle, desc, github, tech_stack}) => {
 
 
             <a href={github} target = "_blank">
-              <img className = "w-12 hover:-translate-y-1 absolute top-0 right-5 linear transition" src = {GitHubLogo} alt = "Github link"/>
+              <img className = "w-12 hover:-translate-y-1 absolute sm:top-0 top-[-1vh] right-5 linear transition" src = {GitHubLogo} alt = "Github link"/>
             </a>
 
             <h4 className = "text-2xl mt-5 font-mono font-bold">Tech Stack</h4>

@@ -22,6 +22,23 @@ html, body {
 }
 
 @layer utilities {
+  @keyframes wavy-text {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(2vh);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  .animate-wavy-text {
+    animation: wavy-text 2s infinite;
+    animation-delay: var(--wave-delay, 0s);
+  }
+
+
   @keyframes fish-tail-movement {
   
     0% {

@@ -84,6 +84,12 @@ export const About = () => {
           <h3 className = "text-2xl font-bold mb-4">Work Experience</h3>
           <div className = "flex flex-col gap-3">
             <div>
+              <h4 className ="text-xl font-bold">Picker / Packer</h4>
+              <p className="mb-3">Dec 2025 - Feb 2026</p>
+              <p>Prepared shipments for back-to-school orders</p>
+            </div>
+
+            <div>
               <h4 className ="text-xl font-bold">Mathematics Tutor</h4>
               <p className="mb-3">Sept 2023 - Present</p>
               <p>Attended to students' needs, and explaining complex topics clearly to students, ranging from year 2 to 13, from various education levels and upbringing</p>
