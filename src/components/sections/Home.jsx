@@ -9,6 +9,11 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 import {RevealOnScroll} from "../RevealOnScroll"
 
 export const Home = () => {
+  const isMobile = window.screen.width < 640;
+  const sharkBoundaries = isMobile ? [100, 80] : [50, 40]
+  const fishBoundaries = isMobile ? [18, 14] : [9, 7]
+  console.log(isMobile)
+  
   return ( 
     <RevealOnScroll>
     <div id="#home" className = "z-40">
@@ -18,8 +23,8 @@ export const Home = () => {
         <ContactBar/>
       </div>
       <div className="relative h-screen w-screen text-4xl overflow-hidden z-10">
-        <School upperY = {30} lowerY = {5} isSlow = {true} isSmall= {true} body = {fishBodyImg} tail = {fishTailImg} amount = {30} widthBoundaries = {[9, 7]} heightFactor = {2 / 3}/>
-        <School upperY = {45} lowerY = {45} isSlow = {true} isSmall= {false} body = {sharkBodyImg} tail = {sharkTailImg} amount = {1} widthBoundaries = {[50, 40]} heightFactor = {5 / 11}/>
+        <School upperY = {30} lowerY = {5} isSlow = {true} isSmall= {true} body = {fishBodyImg} tail = {fishTailImg} amount = {30} widthBoundaries = {fishBoundaries} heightFactor = {2 / 3}/>
+        <School upperY = {45} lowerY = {45} isSlow = {true} isSmall= {false} body = {sharkBodyImg} tail = {sharkTailImg} amount = {1} widthBoundaries = {sharkBoundaries} heightFactor = {5 / 11}/>
       </div>
   </div>
     </RevealOnScroll>
@@ -29,7 +34,7 @@ export const Home = () => {
 
 export const SubTitle = () => {
   return (
-    <h2 className = "text-2xl sm:text-4xl font-mono font-bold" >Final Year Computer Science Student</h2>
+    <h2 className = "text-2xl sm:text-4xl sm:pt-0 pt-5 font-mono font-bold text-center" >Final Year Computer Science Student</h2>
 
   )
 }
@@ -127,15 +132,15 @@ function School({upperY, lowerY, isSlow, isSmall, body, tail, amount, widthBound
           <img src={body} alt="fish body" 
               className="absolute"
               style ={{
-                width: `${stats.width}rem`,
-                height: `${stats.height}rem`,
+                width: `${stats.width}vw`,
+                height: `${stats.height}vw`,
             }}
           />
           <img src={tail} alt="fish Tail"
               className="absolute animate-fish-tail-movement"
               style ={{
-                width: `${stats.width}rem`,
-                height: `${stats.height}rem`,
+                width: `${stats.width}vw`,
+                height: `${stats.height}vw`,
                 "--tail-duration": `${stats.speed/7}s` 
             }}
           />
