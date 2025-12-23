@@ -21,7 +21,6 @@ function App() {
       
       <div className = {`min-h-screen 
         transition-opacity duration-800 ${isLoaded ? "opacity-100": "opacity-0"} text-gray-100`}>
-        <Title/>
         <Home/>
         {/*<Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>*/}
         <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>

@@ -12,8 +12,8 @@ export const Home = () => {
   return ( 
     <RevealOnScroll>
     <div id="#home" className = "z-40">
-      <div className = " absolute right-0 sm:w-[50vw] sm:right-[25vw] w-screen overflow-auto top-[62vh] text-center">
-        
+      <div className = "flex flex-col justify-center items-center absolute top-1/2 w-screen">
+        <Title/>
         <SubTitle className = "z-0"/>
         <ContactBar/>
       </div>
@@ -53,7 +53,7 @@ export const Title = ({opacityClass}) => {
   const firstNameChars = "Dwyane".split("")
   const lastNameChars = "Ramos".split("")
   return (
-  <h1 className={` flex flex-row gap-8 justify-center ${opacityClass}  text-5xl w-screen z-70 absolute text-center top-1/2 font-mono font-bold md:text-8xl`}>
+  <h1 className={` flex flex-row gap-8 justify-center ${opacityClass}  text-5xl  z-70 text-center font-mono font-bold md:text-8xl`}>
       <div className = "flex flex-row">
         {
           firstNameChars.map((c, idx) => {

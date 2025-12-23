@@ -21,7 +21,7 @@
 {
     "title": "Portfolio Website",
     "subtitle": "for Editing & Post-Production Specialist",
-    "description": "Improved on my friend's portfolio website: including making it responsive and gave it a more unique look through things such as animations",
+    "description": "Developed an upgraded version of a portfolio website for my friend: including making it responsive and gave it a more unique look through things such as animations",
     "github": "https://github.com/riz3ndrr/liam-portfolio",
     "image": "../../../../public/assets/liam-portfolio.png",
     "tech_stack": ["React", "JavaScript", "TailwindCSS", "HTML" , "CSS"]
