@@ -51,7 +51,7 @@ export const ContactForm = () => {
   };
 
   return (
-    <form ref={form} onSubmit={sendEmail} className = "w-2xl text-2xl mx-auto">
+    <form ref={form} onSubmit={sendEmail} className = "w-xs xs:w-sm sm:w-2xl text-2xl mx-auto">
       <div className = "flex flex-col sm:flex-row gap-3 justify-center">
         
         <div className = "flex flex-col w-auto">
