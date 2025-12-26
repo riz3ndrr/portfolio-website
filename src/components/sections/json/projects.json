@@ -8,6 +8,7 @@
     "description": "Noticing a lack of tools helping cubers prepare for a competition, I develop this program which allows a user to race against simulated versions of other cubers in a WCA-formatted round",
     "github": "https://github.com/dwyaneramos/cubing-comp-round-sim",
     "image": "assets/comp-sim.png",
+    "type": "Personal",
     "tech_stack": ["Python", "NumPy", "Pandas", "MatPlotLib", "CustomTkinter", "WCA Rest API"]
     },
     {
@@ -16,14 +17,16 @@
     "description": "Made a game with a partner using the MVC architectural pattern. This project introduced me to important SWE practices such as Continuous Integration via GitLab, using design patterns and unit testing",
     "github": "https://github.com/dwyaneramos/seng201-project-driftfever",
     "image": "assets/drift-fever.png",
+    "type": "University",
     "tech_stack": ["Java", "JavaFX", "Maven", "Gradle", "JUnit"]
     },
 {
     "title": "Portfolio Website",
-    "subtitle": "for Editing & Post-Production Specialist",
+    "subtitle": "for Post-Production Specialist",
     "description": "Developed an upgraded version of a portfolio website for my friend. Improvements included making it responsive and gave it a more unique look through things such as animations",
     "github": "https://github.com/dwyaneramos/liam-portfolio",
     "image": "assets/liam-portfolio.png",
+    "type": "Freelance",
     "tech_stack": ["React", "JavaScript", "TailwindCSS", "HTML" , "CSS"]
     },
 
@@ -31,18 +34,20 @@
     {
     "title": "Gunslinger",
     "subtitle": "2-Player Shooting Game",
-    "description": "A game developed on the UC Fun Kit (An embedded system designed by UC) using infrared to communicate between two boards ",
+    "description": "A game developed on the UC Fun Kit (a microcontroller designed by UC) using infrared to communicate between two boards",
     "github": "https://github.com/dwyaneramos/ence-ucfk4-shooting-game",
     "image": "assets/gunslinger.jpg",
+    "type": "University",
     "tech_stack": ["C"]
     },
 
     {
     "title": "Deadly Fight",
     "subtitle": "2D Fighting Game",
-    "description": "Inspired by the new upcoming Mortal Kombat 1, I decided to make my own version. Improved my understanding of OOP and the process behind game development",
-    "github": "https://github.com/dwyaneramos/cubing-comp-round-sim",
+    "description": "Inspired by the new upcoming Mortal Kombat 1, I decided to make my own fighting game. Improved my understanding of OOP and the process behind game development",
+    "github": "https://github.com/dwyaneramos/deadly-fight",
     "image": "assets/deadly-fight.png",
+    "type": "Personal",
     "tech_stack": ["Python", "PyGame"]
     }
 

@@ -5,16 +5,16 @@ import {RevealOnScroll} from "../RevealOnScroll"
 
 
 
-const Project = ({image, title, subtitle, desc, github, tech_stack}) => {
+const Project = ({image, title, subtitle, desc, github, tech_stack, type}) => {
     const isMobile = window.screen.width < 640;
     const githubLogoSize = isMobile ? 40 : 35;
     return (
     <RevealOnScroll>
-      <div className = "rounded-xl border-white/10 border-1 hover:-translate-y-1 transition grid max py-5 my-3 px-2 grid-cols-1 md:grid-cols-2 gap-6 "> 
+      <div className = "rounded-xl border-white/10 border-1 bg-[#021738] hover:-translate-y-1 transition grid max py-5 my-3 px-2 grid-cols-1 md:grid-cols-2 gap-6 "> 
         <img src={`${import.meta.env.BASE_URL}${image}`} alt={`Screenshot of ${title}`} className = "rounded-xl hover:scale-105 transition ease-in w-full max-w-lg mx-auto mx-5"/>
           <div className = "relative ">
-            <h3 className = "text-3xl w-[90%]  font-mono font-bold underline">{title}</h3>
-            <h4 className = "text-2xl font-mono font-bold ">{subtitle} </h4>
+            <h3 className = "text-3xl w-[90%]  font-mono font-black">{title}</h3>
+            <h4 className = "text-2xl font-mono font-semibold ">{subtitle} </h4>
             <p>{desc}</p> 
 
 
@@ -40,7 +40,8 @@ const Project = ({image, title, subtitle, desc, github, tech_stack}) => {
 export const Projects = () => {
   const projects = projectJson.projects;
   const projectsDisplayed = projects.map((project, key) => (
-      <Project key={key} image = {project.image} title = {project.title} subtitle = {project.subtitle} desc = {project.description} github = {project.github} tech_stack = {project.tech_stack}/>
+      <Project key={key} image = {project.image} title = {project.title} subtitle = {project.subtitle}
+      desc = {project.description} github = {project.github} tech_stack = {project.tech_stack} type = {project.type}/>
   ));
 
 

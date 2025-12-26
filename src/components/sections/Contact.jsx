@@ -7,7 +7,7 @@ import emailjs from '@emailjs/browser';
 
 
 export const ContactFooter = () => {
-  const iconSize = 50;
+  const iconSize = 40;
  return (
   <section className = "pl-10 fixed bottom-0 flex flex-row place-content-between bg-[#011536] py-3 w-screen">
    <div className = "flex flex-row gap-3">
@@ -20,11 +20,13 @@ export const ContactFooter = () => {
         <FaLinkedin size={iconSize} className = "hover:-translate-y-1 transition cursor-pointer"/>
       </a>
 
-      <HiOutlineMail size={iconSize}/>
-      <h1 className = "text-2xl mt-2">riz3ndrr@gmail.com</h1>
+      <a href="mailto:riz3ndrr@gmail.com" target="_blank" className = "hover:-translate-y-1 mb-1 transition cursor-pointer">
+        <HiOutlineMail size={iconSize + 5}/>
+      </a>
+
     </div> 
 
-    <a href="https://github.com/dwyaneramos/my-portfolio" target="_blank" className = "text-2xl text-gray-300 mt-2 pr-10">Portfolio Source Code</a>
+    <a href="https://github.com/dwyaneramos/my-portfolio" target="_blank" className = "text-xl underline text-gray-300 mt-2 pr-10">Portfolio Source Code</a>
   </section>
  ) 
 }

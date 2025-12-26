@@ -14,7 +14,7 @@ export const About = () => {
 
       <div className = "max-w-5xl mx-auto px-4">
         <h2 className = "text-5xl font-bold text-center font-mono mb-5 text-white">About Me</h2>
-        <p className = "text-center  text-2xl">Kumusta! I'm a student based in Christchurch, New Zealand, looking for a software engineering internship</p>
+        <p className = "text-center  text-2xl">Kumusta! I'm a student based in Christchurch, New Zealand, looking for a software engineering internship.</p>
 
         <div className = "rounded-xl bg-[#021738] p-8 border-white/10 border hover:-translate-y-1 transition-all my-5">
           <div>
